@@ -119,6 +119,9 @@ const aboutData = [
         title: '  Uzbek, Turkish, Japones',
         name: 'Languages', 
       },
+      {
+        
+      }
     ],
   },
 ];
@@ -128,6 +131,7 @@ import { fadeIn} from '../../variants'
 import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
 import CountUp  from 'react-countup';
+import Image from 'next/image';
 
 const About = () => {
   const [index, setIndex] = useState(0)
@@ -240,6 +244,7 @@ const About = () => {
             return(
               <div key={itemIndex}>
                 <div className='font-light flex gap-4 items-center mb-1 md:mb-0'>
+                 
                   <div className='text-accent text-md'>{item.name}</div>
                  <div className='text-lg'> {item.title}</div>
                 </div>
@@ -248,15 +253,16 @@ const About = () => {
                    <div className='text-accent text-md'>{item.max}</div>
                    <div className='text-lg '>{item.stage}</div>
                  </div>
-                 <div className='grid grid-cols-4 md:grid-cols-5 mx-auto  gap-11'>
-                    {item.icons?.map((icon, itemIndex) => {
-                      return (
-                        <div key={itemIndex} className='hover:text-accent text-4xl  text-white'>
-                          {icon}
-                        </div>
-                      );
-                    })}
+                                {item.icons && (
+                  <div className='grid grid-cols-4 md:grid-cols-5 mx-auto  gap-11'>
+                    {item.icons.map((icon, i) => (
+                      <div key={i} className='hover:text-accent text-4xl  text-white'>
+                        {icon}
+                      </div>
+                    ))}
                   </div>
+                )}
+
 
 
                  
