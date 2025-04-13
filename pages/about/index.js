@@ -163,23 +163,23 @@ const About = () => {
             exit='hidden'
            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'> I am a responsible developer who is always striving for continuous learning and growth. I constantly explore new technologies and work on improving my skills.</motion.p>
            <motion.div
-  className='hidden xl:block absolute -left-[185px] bottom-0 w-[350px] h-[450px]'
-  initial={{ opacity: 0, x: 100 }}
-  animate={{
-    opacity: 1,
-    x: [0, 7, 0], 
-  }}
-  transition={{
-    opacity: { duration: 0.9 },
-    x: {
-      duration: 9,
-      repeat: Infinity,
-      ease: 'easeInOut',
-    },
-  }}
->
-  <Avatar />
-</motion.div>
+              className='hidden xl:block absolute -left-[185px] bottom-0 w-[350px] h-[450px]'
+              initial={{ opacity: 0, x: 100 }}
+              animate={{
+                opacity: 1,
+                x: [0, 7, 0], 
+              }}
+              transition={{
+                opacity: { duration: 0.9 },
+                x: {
+                  duration: 9,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                },
+              }}
+            >
+              <Avatar />
+            </motion.div>
 
 
            {/* countres */}
@@ -188,7 +188,7 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-           className='hidden md:flex md:max-w-xl xl"max-w-none mx-auto xl:mx-0 mb-8'>
+           className=' md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
              <div className='flex gap-x-6 flex-1 xl:gap-x-6'>
               {/* experiens */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
@@ -215,13 +215,12 @@ const About = () => {
                   <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
                   Programming Languages
                   </div>
-              </div>
-             
-                  
+              </div>  
              </div>
            </motion.div>
         </div>
             {/* info */}
+            
         <motion.div 
           variants={fadeIn('left', 0.5)}
           initial='hidden'
@@ -239,8 +238,9 @@ const About = () => {
           )
           })}
         </div>
-        <div className=' py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
+        <div className=' py-2 xl:py-11 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
           {aboutData[index].info.map((item, itemIndex) => {
+            
             return(
               <div key={itemIndex}>
                 <div className='font-light flex gap-4 items-center mb-1 md:mb-0'>
@@ -256,15 +256,12 @@ const About = () => {
                                 {item.icons && (
                   <div className='grid grid-cols-4 md:grid-cols-5 mx-auto  gap-11'>
                     {item.icons.map((icon, i) => (
-                      <div key={i} className='hover:text-accent text-4xl  text-white'>
+                      <div key={i} className='hover:text-accent text-5xl md:text-4xl  text-white'>
                         {icon}
                       </div>
                     ))}
                   </div>
                 )}
-
-
-
                  
               </div>
             )
