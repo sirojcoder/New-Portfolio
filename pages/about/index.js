@@ -229,8 +229,12 @@ const About = () => {
         className='flex flex-col pl-5  w-full xl:max-w-[48%] h-[480px]'>
           <div className='flex gap-x-4 xl:gap-x-8  mx-auto lg:mt-[45px] xl:mx-8 mb-4'>
             {aboutData.map((item, itemIndex) => {
+             
+              
              return(
-            <div key={itemIndex} className={` ${index === itemIndex ? 'text-accent after:w-[100%]  after:!bg-accent after:transition-all after:duration-300' :"after:bg-white"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:absolute after:-bottom-1 after:left-0 `}
+            <div key={itemIndex}
+            
+             className={` ${index === itemIndex ? 'text-accent after:w-[100%]  after:!bg-accent after:transition-all after:duration-300' :"after:bg-white"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:absolute after:-bottom-1 after:left-0 `}
             onClick={()=> setIndex(itemIndex)}
             >
                {item.title}
@@ -243,6 +247,8 @@ const About = () => {
             
             return(
               <div key={itemIndex}>
+               
+                
                 <div className='font-light flex gap-4 items-center mb-1 md:mb-0'>
                  
                   <div className='text-accent text-md'>{item.name}</div>
@@ -256,7 +262,10 @@ const About = () => {
                                 {item.icons && (
                   <div className='grid grid-cols-4 md:grid-cols-5 mx-auto  gap-11'>
                     {item.icons.map((icon, i) => (
+                      
                       <div key={i} className='hover:text-accent text-5xl md:text-4xl  text-white'>
+                       
+                        
                         {icon}
                       </div>
                     ))}

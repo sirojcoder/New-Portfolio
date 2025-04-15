@@ -53,7 +53,7 @@ const Work = () => {
               My Work <span className="text-accent">.</span>
             </h2>
             <p className="mb-4 max-w-[400px] mx-auto lg:mx-0">
-            Here you can see some of the work I've done. They were made using <span className='text-accent'>Html, Css, Sass, Tailwind, JavaScript, React, Next.Js</span> programming languages. If you want, you can see them in their full Live Project and of course  see the GitHub codes.
+            Here you can see some of the work I&apos;ve done. They were made using <span className='text-accent'>Html, Css, Sass, Tailwind, JavaScript, React, Next.Js</span> programming languages. If you want, you can see them in their full Live Project and of course  see the GitHub codes.
             </p>
           </motion.div>
 
