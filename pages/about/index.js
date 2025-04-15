@@ -230,7 +230,6 @@ const About = () => {
           <div className='flex gap-x-4 xl:gap-x-8  mx-auto lg:mt-[45px] xl:mx-8 mb-4'>
             {aboutData.map((item, itemIndex) => {
              
-              
              return(
             <div key={itemIndex}
             
@@ -260,16 +259,15 @@ const About = () => {
                    <div className='text-lg '>{item.stage}</div>
                  </div>
                                 {item.icons && (
-                  <div className='grid grid-cols-4 md:grid-cols-5 mx-auto  gap-11'>
-                    {item.icons.map((icon, i) => (
-                      
-                      <div key={i} className='hover:text-accent text-5xl md:text-4xl  text-white'>
-                       
-                        
-                        {icon}
-                      </div>
-                    ))}
-                  </div>
+                                  <div className='grid grid-cols-4 md:grid-cols-5 mx-auto  gap-11'>
+  {item.icons.map((icon, i) => {
+    return (
+      <div key={i} className='hover:text-accent text-5xl md:text-4xl text-white'>
+        {icon}
+      </div>
+    )
+  })}
+</div>
                 )}
                  
               </div>
