@@ -245,7 +245,7 @@ const About = () => {
                   <div className='text-accent text-md'>{item.name}</div>
                  <div className='text-lg'> {item.title}</div>
                 </div>
-                 {/* <div className='hidden md:flex'>-</div> */}
+               
                  <div className='font-light flex gap-4 items-center mb-1 md:mb-0'>
                    <div className='text-accent text-md'>{item.max}</div>
                    <div className='text-lg '>{item.stage}</div>

@@ -1,7 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import SwiperCore, { Pagination, Autoplay } from 'swiper'; 
+SwiperCore.use([Pagination, Autoplay]); 
 import 'swiper/css';
 import 'swiper/css/pagination';
+
 import Image from 'next/image';
 import { FaGithub } from "react-icons/fa";
 import { FaRegPlayCircle } from "react-icons/fa";
@@ -64,13 +66,15 @@ const Work = () => {
             animate='show'
             exit='hidden'
            className="w-full xl:max-w-[50%]">
-            <Swiper
-              modules={[Pagination]}
-              pagination={{ clickable: true }}
-              spaceBetween={20}
-              slidesPerView={1}
-              slidesPerGroup={1}
-            >
+        <Swiper
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={20}
+            slidesPerView={1}
+          >
               {images.map((img, i) => (
                 <SwiperSlide key={i}>
                   <div className="relative group w-full h-[290px] overflow-hidden rounded-xl">
@@ -108,7 +112,6 @@ const Work = () => {
               ))}
             </Swiper>
 
-            
           </motion.div>
           <Bulb />
             <Circles />

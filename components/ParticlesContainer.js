@@ -20,7 +20,7 @@ const particlesLoaded = useCallback(async () => {}, [] );
       fullScreen: { enable: false },
       background: {
         color: {
-          value: "transparent", // Or any color like "#000000"
+          value: "transparent", 
         },
       },
       fpsLimit: 120,
