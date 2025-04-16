@@ -1,3 +1,4 @@
+//  "use client"
  import React , {useState} from 'react'
 
 
@@ -33,23 +34,20 @@ const aboutData = [
       {
         title: '',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaSass />,
-          <SiTailwindcss />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <FaNodeJs />,
-          <SiAntdesign />,
-          <SiRedux />,
-          <SiTypescript />,
-          <FaGitAlt />,
-          <SiPostman />
+          {icon:<FaHtml5 />  , id:1},
+          // <FaCss3 />,
+          // <FaSass />,
+          // <SiTailwindcss />,
+          // <FaJs />,
+          // <FaReact />,
+          // <SiNextdotjs />,
+          // <FaNodeJs />,
+          // <SiAntdesign />,
+          // <SiRedux />,
+          // <SiTypescript />,
+          // <FaGitAlt />,
+          // <SiPostman />
         ],
-      },
-      {
-       
       },
     ],
   },
@@ -118,9 +116,6 @@ const aboutData = [
       {
         title: '  Uzbek, Turkish, Japones',
         name: 'Languages', 
-      },
-      {
-        
       }
     ],
   },
@@ -230,10 +225,7 @@ const About = () => {
           <div className='flex gap-x-4 xl:gap-x-8  mx-auto lg:mt-[45px] xl:mx-8 mb-4'>
             {aboutData.map((item, itemIndex) => {
              
-             return(
-            <div key={itemIndex}
-            
-             className={` ${index === itemIndex ? 'text-accent after:w-[100%]  after:!bg-accent after:transition-all after:duration-300' :"after:bg-white"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:absolute after:-bottom-1 after:left-0 `}
+             return( <div key={item.title} className={` ${index === itemIndex ? 'text-accent after:w-[100%]  after:!bg-accent after:transition-all after:duration-300' :"after:bg-white"} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:absolute after:-bottom-1 after:left-0 `}
             onClick={()=> setIndex(itemIndex)}
             >
                {item.title}
@@ -242,10 +234,10 @@ const About = () => {
           })}
         </div>
         <div className=' py-2 xl:py-11 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
-          {aboutData[index].info.map((item, itemIndex) => {
+          {aboutData[index].info?.map((item, itemIndex) => {
             
             return(
-              <div key={itemIndex}>
+              <div key={item?.name}>
                
                 
                 <div className='font-light flex gap-4 items-center mb-1 md:mb-0'>
@@ -258,16 +250,12 @@ const About = () => {
                    <div className='text-accent text-md'>{item.max}</div>
                    <div className='text-lg '>{item.stage}</div>
                  </div>
-                                {item.icons && (
-                                  <div className='grid grid-cols-4 md:grid-cols-5 mx-auto  gap-11'>
-  {item.icons.map((icon, i) => {
-    return (
-      <div key={i} className='hover:text-accent text-5xl md:text-4xl text-white'>
-        {icon}
-      </div>
-    )
-  })}
-</div>
+                   {item?.icons && (
+                   <div className='grid grid-cols-4 md:grid-cols-5 mx-auto  gap-11'>
+                    {item?.icons?.map((icon, i) => {
+                       return ( <div key={icon?.id} className='hover:text-accent text-5xl md:text-4xl text-white'> {icon?.icon} </div>)
+                    })}
+                  </div>
                 )}
                  
               </div>
