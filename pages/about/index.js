@@ -183,7 +183,7 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-           className=' md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
+           className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
              <div className='flex gap-x-6 flex-1 xl:gap-x-6'>
               {/* experiens */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
