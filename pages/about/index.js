@@ -69,19 +69,19 @@ const aboutData = [
     info: [
       {
         title: 'Web (During the course) - Online shop',
-        stage: '2024 - 2024',
+        stage: '2024.10.15 - 2024.10.21',
       },
       {
         title: 'Web (During the course) - Kafe Menu ',
-        stage: '2024 - 2024',
+        stage: '2024.12.5 - 2024.12.16',
       },
       {
         title: 'Web (During the course) - e-commerce site',
-        stage: '2025 - 2025',
+        stage: '2025.2.13 - 2025.2.19',
       },
       {
         title: 'Web (During the course) - Medium clone',
-        stage: '2025 - 2025',
+        stage: '2025.3.22 - 2025.3.29',
       },
     ],
   },
@@ -114,7 +114,7 @@ const aboutData = [
         max: 'Phone'
       },
       {
-        title: '  Uzbek, Turkish, Japones',
+        title: '  Uzbek, Turkish, Japanes',
         name: 'Languages', 
       }
     ],
@@ -126,7 +126,7 @@ import { fadeIn} from '../../variants'
 import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
 import CountUp  from 'react-countup';
-import Image from 'next/image';
+
 
 const About = () => {
   const [index, setIndex] = useState(0)
